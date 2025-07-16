@@ -23,7 +23,18 @@
 // console.log(`Il tuo risultato è ${quadrato(5)}`);
 
 // SNACK 3
-const divisione = (a, b) => a / b
-const eseguiOperazione = (a, b, callback) => callback(a, b);
+// const divisione = (a, b) => a / b
+// const eseguiOperazione = (a, b, callback) => callback(a, b);
 
-console.log(eseguiOperazione(6, 2, divisione));
+// console.log(eseguiOperazione(6, 2, divisione));
+
+// SNACK 4
+function creaTimer(time) {
+    return function () {
+        setTimeout(() => { (console.log("Tempo scaduto!")) }, time)
+    }
+};
+
+const tempo = creaTimer(4000);
+
+tempo();
