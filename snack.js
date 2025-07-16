@@ -15,5 +15,9 @@
 
 // SNACK 1.3
 
-const somma = (num1, num2) => num1 + num2;
-console.log(somma(3, 2));
+// const somma = (num1, num2) => num1 + num2;
+// console.log(somma(3, 2));
+
+// SNACK 2
+const quadrato = (num) => num * num;
+console.log(quadrato(5));
