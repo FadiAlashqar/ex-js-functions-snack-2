@@ -40,13 +40,26 @@
 // tempo();
 
 // SNACK 5
-function stampaOgniSecondo(message) {
-    const interval = setInterval(() => {
-        console.log(message)
-    }, 1000)
-    return interval
-}
+// function stampaOgniSecondo(message) {
+//     const interval = setInterval(() => {
+//         console.log(message)
+//     }, 1000)
+//     return interval
+// }
 
-const interval = stampaOgniSecondo("ciao");
+// const interval = stampaOgniSecondo("ciao");
 
-setTimeout(() => { clearInterval(interval) }, 5000);
+// setTimeout(() => { clearInterval(interval) }, 5000);
+
+// SNACK 6
+function creaContatoreAutomatico(time, num) {
+    return function () {
+        const interval = setInterval(() => {
+            console.log(num++)
+        }, time)
+        return interval
+    }
+};
+
+const interval = creaContatoreAutomatico(1000, 1)();
+setTimeout(() => { clearInterval(interval) }, 10000);
