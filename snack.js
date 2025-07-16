@@ -29,12 +29,24 @@
 // console.log(eseguiOperazione(6, 2, divisione));
 
 // SNACK 4
-function creaTimer(time) {
-    return function () {
-        setTimeout(() => { (console.log("Tempo scaduto!")) }, time)
-    }
-};
+// function creaTimer(time) {
+//     return function () {
+//         setTimeout(() => { (console.log("Tempo scaduto!")) }, time)
+//     }
+// };
 
-const tempo = creaTimer(4000);
+// const tempo = creaTimer(4000);
 
-tempo();
+// tempo();
+
+// SNACK 5
+function stampaOgniSecondo(message) {
+    const interval = setInterval(() => {
+        console.log(message)
+    }, 1000)
+    return interval
+}
+
+const interval = stampaOgniSecondo("ciao");
+
+setTimeout(() => { clearInterval(interval) }, 5000);
