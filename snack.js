@@ -19,5 +19,11 @@
 // console.log(somma(3, 2));
 
 // SNACK 2
-const quadrato = (num) => num * num;
-console.log(quadrato(5));
+// const quadrato = (num) => num * num;
+// console.log(`Il tuo risultato è ${quadrato(5)}`);
+
+// SNACK 3
+const divisione = (a, b) => a / b
+const eseguiOperazione = (a, b, callback) => callback(a, b);
+
+console.log(eseguiOperazione(6, 2, divisione));
