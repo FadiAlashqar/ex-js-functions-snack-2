@@ -52,14 +52,30 @@
 // setTimeout(() => { clearInterval(interval) }, 5000);
 
 // SNACK 6
-function creaContatoreAutomatico(time, num) {
-    return function () {
-        const interval = setInterval(() => {
-            console.log(num++)
-        }, time)
-        return interval
-    }
-};
+// function creaContatoreAutomatico(time, num) {
+//     return function () {
+//         const interval = setInterval(() => {
+//             console.log(num++)
+//         }, time)
+//         return interval
+//     }
+// };
 
-const interval = creaContatoreAutomatico(1000, 1)();
-setTimeout(() => { clearInterval(interval) }, 10000);
+// const interval = creaContatoreAutomatico(1000, 1)();
+// setTimeout(() => { clearInterval(interval) }, 10000);
+
+// SNACK 7
+function eseguiEferma(message, start, stop) {
+    let interval;
+    setTimeout(() => {
+        interval = setInterval(() => {
+            console.log(message)
+        }, 1000)
+    }, start)
+    setTimeout(() => {
+        clearInterval(interval)
+    }, stop)
+
+}
+
+eseguiEferma("ciao", 4000, 20000);
