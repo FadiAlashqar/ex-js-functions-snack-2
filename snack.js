@@ -65,17 +65,29 @@
 // setTimeout(() => { clearInterval(interval) }, 10000);
 
 // SNACK 7
-function eseguiEferma(message, start, stop) {
-    let interval;
-    setTimeout(() => {
-        interval = setInterval(() => {
-            console.log(message)
-        }, 1000)
-    }, start)
-    setTimeout(() => {
-        clearInterval(interval)
-    }, stop)
+// function eseguiEferma(message, start, stop) {
+//     let interval;
+//     setTimeout(() => {
+//         interval = setInterval(() => {
+//             console.log(message)
+//         }, 1000)
+//     }, start)
+//     setTimeout(() => {
+//         clearInterval(interval)
+//     }, stop)
 
-}
+// }
 
-eseguiEferma("ciao", 4000, 20000);
+// eseguiEferma("ciao", 4000, 20000);
+
+// SNACK 8 
+function contoAllaRovescia(n) {
+    let count;
+    return count = setInterval(() => {
+        console.log(n--)
+        if (n === 0) {
+            console.log("Tempo scaduto!")
+        }
+    }, 1000)
+};
+const count = contoAllaRovescia(10);
