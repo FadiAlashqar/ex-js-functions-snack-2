@@ -81,13 +81,29 @@
 // eseguiEferma("ciao", 4000, 20000);
 
 // SNACK 8 
-function contoAllaRovescia(n) {
-    let count;
-    return count = setInterval(() => {
-        console.log(n--)
-        if (n === 0) {
-            console.log("Tempo scaduto!")
+// function contoAllaRovescia(n) {
+//     let count;
+//     return count = setInterval(() => {
+//         console.log(n--)
+//         if (n === 0) {
+//             console.log("Tempo scaduto!")
+//         }
+//     }, 1000)
+// };
+// const count = contoAllaRovescia(10);
+
+// SNACK 9
+const exampleArray = ["camminare", "correre", "passeggiare"]
+function sequenzaOperazioni(array) {
+    let i = 0
+
+    const interval = setInterval(() => {
+        console.log(array[i]);
+        i++;
+        if (i > array.length - 1) {
+            clearInterval(interval);
+            console.log("Operazioni terminate");
         }
-    }, 1000)
-};
-const count = contoAllaRovescia(10);
+    }, 2000)
+}
+sequenzaOperazioni(exampleArray)
